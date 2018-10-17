@@ -1,0 +1,5 @@
+-   repo: https://github.com/RunningToTheEdgeOfTheWorld/pre-commit.git
+    sha: 411c305fadd02f19e543cc10d3ecd5baeab438e0
+    hooks:
+        - id: python-pylint
+        - id: python-isort
