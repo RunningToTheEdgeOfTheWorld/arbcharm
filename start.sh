@@ -2,4 +2,4 @@
 
 docker stop arbcharm || echo
 docker rm -v arbcharm || echo
-docker run -dt --name arbcharm arbcharm
+docker run -dt --name arbcharm -e ARBCHARM=prd arbcharm
