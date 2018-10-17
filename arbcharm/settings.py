@@ -15,13 +15,13 @@ CACHE_ORDER_ROW_LENGTH = 20
 ARB_CONF = {
     'BTC/USDT': {
         'binance': {
-            'apiKey': os.getenv('binance_apiKey', 'test'),
-            'secret': os.getenv('binance_secret', 'test'),
+            'apiKey': os.getenv('binance_apiKey', '请替换我'),
+            'secret': os.getenv('binance_secret', '请替换我'),
             'min_amount': 0.002
         },
         'huobipro': {
-            'apiKey': os.getenv('huobipro_apiKey', 'test'),
-            'secret': os.getenv('huobipro_secret', 'test'),
+            'apiKey': os.getenv('huobipro_apiKey', '请替换我'),
+            'secret': os.getenv('huobipro_secret', '请替换我'),
             'min_amount': 0.002
         },
     }
