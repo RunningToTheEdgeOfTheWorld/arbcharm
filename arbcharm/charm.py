@@ -47,7 +47,7 @@ class ArbCharm:
         if len(ob_l) < 2:
             return
 
-        self.logger.info(
+        self.logger.debug(
             event='arbitrage',
             market_price={ob.exchange.name: (ob.asks[0].price+ob.bids[0].price)/2 for ob in ob_l},
             time_delay={ob.exchange.name: now-ob.timestamp for ob in ob_l},
@@ -170,7 +170,7 @@ class ArbCharm:
         cancel_success = False
         while not cancel_success:
             try:
-                await exchange.ccxt_exchange.cancel_order(oid)
+                await exchange.ccxt_exchange.cancel_order(oid, symbol=self.symbol)
                 cancel_success = True
                 self.logger.info(event='cancel_order_success', oid=oid, exchange=exchange.name)
             except ccxt_errors.OrderNotFound:
