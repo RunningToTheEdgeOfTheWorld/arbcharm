@@ -162,7 +162,7 @@ class ArbCharm:
             return
 
         oid = res['id']
-        await asyncio.sleep(3)
+        await asyncio.sleep(10)
         await self.deal_cancel(exchange, oid)
         await self.save_order_and_trade(exchange, oid)
 
